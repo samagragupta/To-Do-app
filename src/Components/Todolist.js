@@ -7,7 +7,9 @@ class Todolist extends Component {
         return (
             <div className="todolist">
                 <img src={Bin} className="bin" alt="Bin" />
-                Samagra
+                <div className="task">
+                    Samagra
+                </div>
             </div>
         );
     }
