@@ -1,0 +1,19 @@
+.boxbody {
+    height: 500px;
+    width: 400px;
+    color: blue;
+    background-color: #BF7BAA;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 30px;
+}
+
+.list {
+    margin: 50px 0;
+    background-color: #997F6F;
+    height: 400px;
+}
