@@ -1,0 +1,26 @@
+.addmodal {
+    width: 343px;
+    height: 105px;
+    position: absolute;
+    margin: auto;
+    right: 0px;
+    top: 8%;
+    left: 0px;
+    background-color: aqua;
+    border-radius: 30px;
+}
+
+.head {
+    display: block;
+    font-size: 20px;
+    color: green;
+}
+
+.text {
+    margin-top: 10px;
+}
+
+.addbutton {
+    display: block;
+    margin: 10px auto;
+}
