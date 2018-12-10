@@ -1,0 +1,9 @@
+.todolist {
+    height: 40px;
+}
+
+.bin {
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
