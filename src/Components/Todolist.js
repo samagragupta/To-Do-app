@@ -8,7 +8,7 @@ class Todolist extends Component {
             <div className="todolist">
                 <img src={Bin} className="bin" alt="Bin" />
                 <div className="task">
-                    Samagra
+                    {this.props.tasks}
                 </div>
             </div>
         );

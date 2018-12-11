@@ -18,6 +18,11 @@
 
 .text {
     margin-top: 10px;
+    width: 250px;
+    height: 28px;
+    border-radius: 5px;
+    padding-right: 0px;
+    background-color: dodgerblue;
 }
 
 .addbutton {

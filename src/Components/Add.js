@@ -5,8 +5,11 @@ import AddModal from './AddModal';
 
 class Add extends Component {
 
-    state = {
-        display : false
+    constructor (props) {
+        super(props)
+        this.state = {
+            display : false,
+        }
     }
 
     displayModalHandler = () => {
@@ -30,7 +33,7 @@ class Add extends Component {
             <div className="add">
                 <img src={Addicon} className="addicon"  onClick={this.displayModalHandler} alt="add" />  
                 <div style={style}>
-                    <AddModal />
+                    <AddModal {...this.props} />
                 </div>               
             </div>
         );
