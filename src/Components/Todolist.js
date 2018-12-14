@@ -8,6 +8,7 @@ class Todolist extends Component {
         super(props);
         this.state = {
             display : false,
+            strikes : false,
         }
     }
 
@@ -16,22 +17,39 @@ class Todolist extends Component {
         this.setState ({
             display : displayValue
         })
-      }
+    }
+
+    strike = () => {
+        var strikeValue = !this.state.strikes;
+        this.setState ({
+            strikes : strikeValue
+        })
+    }
+
+
 
     render () {
 
         var style = {
             display: 'block',
-          }
+        }
+
+        var line = {
+            textDecoration: 'none',
+        }
       
-          if (this.state.display){
-              style.display = 'none';
-          }
+        if (this.state.display){
+            style.display = 'none';
+        }
+
+        if (this.state.strikes){
+            line.textDecoration = 'line-through';
+        }
 
         return (
             <div className="todolist" style={style}>
                 <img src={Bin} className="bin" alt="Bin" onClick={this.displayModalHandler} />
-                <div className="task">
+                <div className="task" style = {line} onClick={this.strike}>
                     {this.props.tasks}
                 </div>
             </div>

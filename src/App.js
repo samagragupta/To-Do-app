@@ -19,7 +19,8 @@ class App extends Component {
     var displayValue = !this.state.display;
     this.setState({
       itemArray: [...this.state.itemArray, this.state.inputValue],
-      display : displayValue
+      display : displayValue,
+      inputValue : '',
     })
   }
 
