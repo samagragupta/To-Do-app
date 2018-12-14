@@ -9,15 +9,17 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        lists: '',
         inputValue: '',
-        itemArray: []
+        itemArray: [],
+        display : false,
     }
 }
 
   onAddTask = () => {
+    var displayValue = !this.state.display;
     this.setState({
-      itemArray: [...this.state.itemArray, this.state.inputValue]
+      itemArray: [...this.state.itemArray, this.state.inputValue],
+      display : displayValue
     })
   }
 
@@ -27,7 +29,22 @@ class App extends Component {
     });
   }
 
+  displayModalHandler = () => {
+    var displayValue = !this.state.display;
+    this.setState ({
+        display : displayValue
+    })
+  }
+
   render() {
+
+    var style = {
+      display: 'none',
+    }
+
+    if (this.state.display){
+        style.display = 'block';
+    }
 
     return (
       <div className="App">
@@ -43,7 +60,8 @@ class App extends Component {
           </div>
           }>
         </Box>
-        <Add addTask = {this.onAddTask} inputValues = {this.updateInputValue} inputV = {this.state.inputValue}  />
+        <Add addTask = {this.onAddTask} inputValues = {this.updateInputValue}
+         inputV = {this.state.inputValue} displayStyle = {style} displayn = {this.displayModalHandler} />
       </div>
     );
   }

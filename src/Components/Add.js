@@ -5,36 +5,13 @@ import AddModal from './AddModal';
 
 class Add extends Component {
 
-    constructor (props) {
-        super(props)
-        this.state = {
-            display : false,
-        }
-    }
-
-    displayModalHandler = () => {
-        var displayValue = !this.state.display;
-        this.setState ({
-            display : displayValue
-        })
-    }
-
     render () {
-
-        var style = {
-            display: 'none',
-        }
-
-        if (this.state.display){
-            style.display = 'block';
-        }
-
         return (
             <div className="add">
-                <img src={Addicon} className="addicon"  onClick={this.displayModalHandler} alt="add" />  
-                <div style={style}>
+                <img src={Addicon} className="addicon"  onClick={this.props.displayn} alt="add" />  
+                <div style={this.props.displayStyle}>
                     <AddModal {...this.props} />
-                </div>               
+                </div>
             </div>
         );
     }
