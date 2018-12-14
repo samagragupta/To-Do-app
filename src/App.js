@@ -9,46 +9,34 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        lists: 'Hi',
-        inputValue: 'hey',
+        lists: '',
+        inputValue: '',
         itemArray: []
     }
 }
 
   onAddTask = () => {
-    this.setState ({
-        list: this.state.inputValue
+    this.setState({
+      itemArray: [...this.state.itemArray, this.state.inputValue]
+    })
+  }
+
+  updateInputValue = (event) => {
+    this.setState({
+      inputValue: event.target.value
     });
-    const item = this.state.itemArray;
-    const title = '';
-    const text = '';
-    item.push({ title, text })
-    this.setState({itemArray: item})
-}
-
-updateInputValue = (event) => {
-  this.setState({
-    inputValue: event.target.value
-  });
-}
-
-createProject() {
-  const item = this.state.itemArray;
-  const title = '';
-  const text = '';
-  item.push({ title, text })
-  this.setState({itemArray: item})
-}
+  }
 
   render() {
+
     return (
       <div className="App">
         <Box createTodo = {
           <div>
-            {this.state.itemArray.map((item, index) => {
+            {this.state.itemArray.map((itemArr) => {
               return (
-                <div className="box" key={index}>
-                  <Todolist tasks = {this.state.list} />
+                <div className="box">
+                  <Todolist tasks = {itemArr} />
                 </div>
               )
             })}

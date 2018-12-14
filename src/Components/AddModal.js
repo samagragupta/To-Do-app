@@ -3,26 +3,6 @@ import './AddModal.css';
 
 class AddModal extends Component {
 
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         lists: 'Hi',
-    //         inputValue: 'hey'
-    //     }
-    // }
-
-    // onAddTask = () => {
-    //     this.setState ({
-    //         list: this.state.inputValue
-    //     });
-    // }
-
-    // updateInputValue = (event) => {
-    //     this.setState({
-    //       inputValue: event.target.value
-    //     });
-    //   }
-
     render () {
         return (
             <div className="addmodal">
