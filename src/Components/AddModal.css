@@ -6,7 +6,7 @@
     right: 0px;
     top: 8%;
     left: 0px;
-    background-color: aqua;
+    background-color: wheat;
     border-radius: 30px;
 }
 
@@ -22,7 +22,8 @@
     height: 28px;
     border-radius: 5px;
     padding-right: 0px;
-    background-color: dodgerblue;
+    background-color: #ED8F03;
+    color: black;
 }
 
 .addbutton {
