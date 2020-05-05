@@ -18,3 +18,15 @@
     margin-top: 5px;
     float: left;
 }
+
+.date {
+    right: 0;
+    position: absolute;
+    color: blue;
+}
+
+.priority {
+    right: -70px;
+    position: absolute;
+    color: chartreuse;
+}
