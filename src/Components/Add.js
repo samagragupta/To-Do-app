@@ -3,18 +3,13 @@ import './Add.css'
 import Addicon from './add.png';
 import AddModal from './AddModal';
 
-class Add extends Component {
-
-    render () {
-        return (
-            <div className="add">
-                <img src={Addicon} className="addicon"  onClick={this.props.displayn} alt="add" />  
-                <div style={this.props.displayStyle}>
-                    <AddModal {...this.props} />
-                </div>
+const Add = props =>
+        <div className="add">
+            <img src={Addicon} className="addicon"  onClick={props.displayn} alt="add" />  
+            <div style={props.displayStyle}>
+                <AddModal {...props} />
             </div>
-        );
-    }
-}
+        </div>
+        
 
 export default Add;
