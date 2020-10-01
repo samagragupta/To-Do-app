@@ -29,4 +29,5 @@
 .addbutton {
     display: block;
     margin: 10px auto;
+    cursor: pointer;
 }
