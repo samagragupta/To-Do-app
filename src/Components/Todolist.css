@@ -14,19 +14,15 @@
 }
 
 .task {
-    margin-left: 10px;
-    margin-top: 5px;
-    float: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .date {
-    right: 0;
-    position: absolute;
     color: blue;
 }
 
 .priority {
-    right: -70px;
-    position: absolute;
     color: chartreuse;
 }
